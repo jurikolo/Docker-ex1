@@ -7,11 +7,11 @@ To build:
 
 Copy the sources down -
 
-	# docker build --rm -t <username>/redis .
+	# docker build --rm -t jurikolo/fedoraredis .
 
 To run:
 
-	# docker run -d -p 6379:6379 <username>/redis
+	# docker run -d -p 6379:6379 jurikolo/fedoraredis
 
 To test:
 
