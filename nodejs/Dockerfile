@@ -7,7 +7,7 @@ RUN dnf -y install npm make && dnf clean all
 
 ADD . /src
 
-RUN cd /src; npm install redis hiredis
+RUN cd /src; npm install; npm install redis
 
 EXPOSE 8080
 
