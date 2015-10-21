@@ -7,11 +7,11 @@ To build:
 
 Copy the sources down -
 
-    # docker build --rm -t <username>/nginx .
+    # docker build --rm -t jurikolo/fedoranginx .
 
 To run:
 
-    # docker run -d -p 80:80 <username>/nginx
+    # docker run -d -p 80:80 jurikolo/fedoranginx
 
 To test:
 
