@@ -1,5 +1,5 @@
 FROM fedora
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+MAINTAINER Jurijs Kolomijecs
 
 RUN dnf -y update && dnf clean all
 RUN dnf clean packages
