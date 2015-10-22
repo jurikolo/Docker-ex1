@@ -12,7 +12,9 @@ How to build:
 * Nginx: docker build --rm -t jurikolo/fedoranginx .
 * Redis: docker build --rm -t jurikolo/fedoraredis .
 
-How to run:
-2 NodeJS: docker run -d --name node1 -p 8080 --link redis:redis jurikolo/fedoranodejs
-3 Nginx: docker run -d --name nginx -p 80:80 --link node1:node1 --link node2:node2 --link node3:node3 jurikolo/fedoranginx
-1 Redis: docker run -d --name redis -p 6379:6379 jurikolo/fedoraredis
+How to run (follow exactly this sequence):
+* Redis: docker run -d --name redis -p 6379:6379 jurikolo/fedoraredis
+* NodeJS1: docker run -d --name node1 -p 8080 --link redis:redis jurikolo/fedoranodejs
+* NodeJS2: docker run -d --name node2 -p 8080 --link redis:redis jurikolo/fedoranodejs
+* NodeJS3: docker run -d --name node3 -p 8080 --link redis:redis jurikolo/fedoranodejs
+* Nginx: docker run -d --name nginx -p 80:80 --link node1:node1 --link node2:node2 --link node3:node3 jurikolo/fedoranginx
